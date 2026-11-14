@@ -21,6 +21,15 @@
 
   let jumpKeys = [...DEFAULT_KEYS.jumpKeys];
   let duckKeys = [...DEFAULT_KEYS.duckKeys];
+  let soundOn = true;
+  let lastScoreChime = 0;
+  let duckLatched = false;
+
+  function sfx(name) {
+    if (!soundOn || !window.DinoSound) return;
+    const fn = DinoSound[name];
+    if (typeof fn === "function") fn.call(DinoSound);
+  }
 
   function codeOf(e) {
     return e.code || e.key;
@@ -73,6 +82,10 @@
   function loadKeys(data) {
     if (Array.isArray(data.jumpKeys) && data.jumpKeys.length) jumpKeys = data.jumpKeys;
     if (Array.isArray(data.duckKeys) && data.duckKeys.length) duckKeys = data.duckKeys;
+    if (typeof data.sound === "boolean") {
+      soundOn = data.sound;
+      if (window.DinoSound) DinoSound.setEnabled(soundOn);
+    }
     updateHint();
   }
 
@@ -130,7 +143,7 @@
   }));
 
   if (store) {
-    store.get(["hi", "skin", "jumpKeys", "duckKeys"], (r) => {
+    store.get(["hi", "skin", "jumpKeys", "duckKeys", "sound"], (r) => {
       hi = r.hi || 0;
       skin = r.skin || 0;
       loadKeys(r);
@@ -138,8 +151,8 @@
     });
     chrome.storage.onChanged.addListener((changes, area) => {
       if (area !== "local") return;
-      if (changes.jumpKeys || changes.duckKeys) {
-        store.get(["jumpKeys", "duckKeys"], loadKeys);
+      if (changes.jumpKeys || changes.duckKeys || changes.sound) {
+        store.get(["jumpKeys", "duckKeys", "sound"], loadKeys);
       }
       if (changes.hi) hi = changes.hi.newValue || 0;
       if (changes.skin) {
@@ -187,11 +200,14 @@
       obs = [];
       parts = [];
       gap = 260;
+      lastScoreChime = 0;
+      sfx("start");
       return;
     }
     if (y >= GY && !duck) {
       vy = -10.8;
       dust(6);
+      sfx("jump");
     }
   }
 
@@ -209,6 +225,11 @@
 
     spd = Math.min(9, 4.2 + score / 400);
     score += spd * 0.04 * dt;
+    const milestone = Math.floor(score / 100);
+    if (milestone > lastScoreChime && milestone > 0) {
+      lastScoreChime = milestone;
+      sfx("score");
+    }
     vy += (0.62 + (duck && y < GY ? 0.9 : 0)) * dt;
     y += vy * dt;
     if (y >= GY) {
@@ -250,6 +271,7 @@
           : { l: o.x - 12, r: o.x + 12, t: o.y - 8, b: o.y + 8 };
       if (db.r > b.l && db.l < b.r && db.b > b.t && db.t < b.b) {
         st = "dead";
+        sfx("hit");
         if (score > hi) {
           hi = score;
           if (store) store.set({ hi: Math.floor(hi) });
@@ -639,13 +661,19 @@
     }
     if (isDuck(e)) {
       e.preventDefault();
+      if (!duckLatched) sfx("duck");
       duck = true;
+      duckLatched = true;
     }
   });
   window.addEventListener("keyup", (e) => {
-    if (isDuck(e)) duck = false;
+    if (isDuck(e)) {
+      duck = false;
+      duckLatched = false;
+    }
   });
   window.addEventListener("blur", () => {
     duck = false;
+    duckLatched = false;
   });
 })();

@@ -15,9 +15,12 @@ Chrome ke **new tab** pe Dino-style runner. Jump cacti, duck birds, beat your hi
 Toolbar icon pe click karke:
 
 - **Game on new tab** — On/Off (Off hone par simple Google search new tab)
+- **Sound effects** — jump / duck / hit / score sounds
 - **Jump / Duck keys** — Change dabao, naya key press karo
 - **Reset defaults** — Space / ↑ jump, ↓ duck
 - **High score reset**
+
+New tab pe top-right **✕** → Chrome default new tab / Google pe wapas.
 
 ## Default keyboard
 

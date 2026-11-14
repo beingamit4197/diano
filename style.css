@@ -1,24 +1,157 @@
-:root{--navy:#1F2A44;--blue:#38B6FF;--red:#FF4D6D}
-*{box-sizing:border-box}
-html,body{height:100%;margin:0}
-body{
-  font-family:ui-rounded,"Nunito","Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;
-  color:var(--navy);
-  background-color:#F2F2F2;
-  background-image:conic-gradient(#E8E8E8 25%,transparent 0 50%,#E8E8E8 0 75%,transparent 0);
-  background-size:64px 64px;
-  display:grid;place-items:center;
+:root {
+  --navy: #1f2a44;
+  --blue: #38b6ff;
+  --red: #ff4d6d;
+  --page-bg: #eef3f8;
 }
-main{width:min(94vw,1000px)}
-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-h1{font-size:22px;font-weight:800;letter-spacing:-.01em;margin:0}
-#skins{display:flex;gap:10px}
-.skin{width:26px;height:26px;border-radius:50%;border:3px solid #fff;background:var(--c);
-  box-shadow:0 2px 6px rgba(31,42,68,.25);cursor:pointer;padding:0;transition:transform .15s}
-.skin:hover{transform:scale(1.12)}
-.skin.on{outline:3px solid var(--navy);outline-offset:2px}
-.skin:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
-canvas{display:block;width:100%;border-radius:22px;box-shadow:0 14px 40px rgba(31,42,68,.22);outline:none;touch-action:manipulation}
-canvas:focus-visible{box-shadow:0 0 0 4px var(--blue),0 14px 40px rgba(31,42,68,.22)}
-.hint{text-align:center;font-size:14px;margin:16px 0 0;color:#5B6B8A}
-@media (prefers-reduced-motion:reduce){.skin{transition:none}}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+html {
+  background: var(--page-bg);
+}
+
+body {
+  font-family: ui-rounded, "Nunito", "Baloo 2", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--navy);
+  background-color: var(--page-bg);
+  background-image:
+    radial-gradient(ellipse 90% 60% at 10% -10%, #d7efff 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 0%, #ffe6ec 0%, transparent 50%),
+    linear-gradient(180deg, #f7fafc 0%, #e8eef5 100%);
+  background-attachment: fixed;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Full opaque backdrop so nothing behind shows through */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--page-bg);
+  pointer-events: none;
+}
+
+.top-bar {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 50;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.close-ntp {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--navy);
+  box-shadow: 0 8px 22px rgba(31, 42, 68, 0.14);
+  display: grid;
+  place-items: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.close-ntp:hover {
+  transform: scale(1.05);
+  background: #fff;
+}
+
+.close-ntp:active { transform: scale(0.96); }
+
+.close-ntp svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+#game-root {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 56px 16px 28px;
+}
+
+main {
+  width: min(94vw, 1000px);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+#skins {
+  display: flex;
+  gap: 10px;
+}
+
+.skin {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: var(--c);
+  box-shadow: 0 2px 6px rgba(31, 42, 68, 0.25);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s;
+}
+
+.skin:hover { transform: scale(1.12); }
+.skin.on { outline: 3px solid var(--navy); outline-offset: 2px; }
+.skin:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+
+canvas {
+  display: block;
+  width: 100%;
+  border-radius: 22px;
+  background: #7fcbff;
+  box-shadow: 0 14px 40px rgba(31, 42, 68, 0.22);
+  outline: none;
+  touch-action: manipulation;
+}
+
+canvas:focus-visible {
+  box-shadow: 0 0 0 4px var(--blue), 0 14px 40px rgba(31, 42, 68, 0.22);
+}
+
+.hint {
+  text-align: center;
+  font-size: 14px;
+  margin: 16px 0 0;
+  color: #5b6b8a;
+}
+
+.view[hidden] { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .skin, .close-ntp { transition: none; }
+}

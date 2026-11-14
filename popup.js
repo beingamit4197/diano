@@ -1,11 +1,13 @@
 const DEFAULTS = {
   enabled: true,
+  sound: true,
   jumpKeys: ["Space", "ArrowUp"],
   duckKeys: ["ArrowDown"],
   hi: 0,
 };
 
 const enabledEl = document.getElementById("enabled");
+const soundEl = document.getElementById("sound");
 const statusPill = document.getElementById("statusPill");
 const jumpLabel = document.getElementById("jumpLabel");
 const duckLabel = document.getElementById("duckLabel");
@@ -42,6 +44,7 @@ function labelKeys(keys) {
 
 function applyUi() {
   enabledEl.checked = !!settings.enabled;
+  soundEl.checked = settings.sound !== false;
   statusPill.textContent = settings.enabled ? "ON" : "OFF";
   statusPill.dataset.on = settings.enabled ? "true" : "false";
   jumpLabel.textContent = labelKeys(settings.jumpKeys);
@@ -118,6 +121,7 @@ window.addEventListener("keydown", async (e) => {
 }, true);
 
 enabledEl.addEventListener("change", () => save({ enabled: enabledEl.checked }));
+soundEl.addEventListener("change", () => save({ sound: soundEl.checked }));
 resetKeys.addEventListener("click", () =>
   save({ jumpKeys: DEFAULTS.jumpKeys, duckKeys: DEFAULTS.duckKeys })
 );

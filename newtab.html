@@ -3,11 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#eef3f8" />
   <title>New Tab</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="search.css" />
 </head>
 <body>
+  <div class="top-bar">
+    <button type="button" class="close-ntp" id="closeNtp" title="Back to Chrome new tab" aria-label="Close game and open Chrome new tab">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+  </div>
+
   <!-- Game mode (extension ON) -->
   <div id="game-root" class="view" hidden>
     <main>
@@ -46,6 +55,7 @@
     </div>
   </div>
 
+  <script src="sounds.js"></script>
   <script src="newtab.js"></script>
 </body>
 </html>
