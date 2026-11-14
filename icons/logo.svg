@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="712" viewBox="0 0 720 712" fill="none">
+  <rect width="720" height="712" fill="#F6F3EC"/>
+  <g transform="translate(200 298) scale(1.6)">
+    <!-- body / neck / beak -->
+    <path d="M48 58 Q16 68 2 102 Q34 94 54 88 Z" fill="#14171F"/>
+    <ellipse cx="92" cy="70" rx="56" ry="33" fill="#14171F"/>
+    <path d="M112 52 Q134 48 138 26 L170 34 Q164 74 128 88 Z" fill="#14171F"/>
+    <rect x="140" y="14" width="56" height="34" rx="17" fill="#14171F"/>
+    <!-- legs -->
+    <rect x="68" y="94" width="17" height="32" rx="8" fill="#14171F"/>
+    <rect x="104" y="94" width="17" height="32" rx="8" fill="#14171F"/>
+    <!-- crest -->
+    <path d="M52 44 L62 22 L72 40 L84 18 L94 38 L106 20 L114 42 Z" fill="#E4572E"/>
+    <!-- eye -->
+    <circle cx="168" cy="27" r="4" fill="#F6F3EC"/>
+  </g>
+  <!-- wordmark -->
+  <text
+    x="360"
+    y="640"
+    text-anchor="middle"
+    font-family="Space Grotesk, Arial Black, Arial, sans-serif"
+    font-size="128"
+    font-weight="700"
+    letter-spacing="10"
+    fill="#14171F"
+  >DIAN<tspan fill="#E4572E">O</tspan></text>
+</svg>

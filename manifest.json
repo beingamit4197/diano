@@ -1,16 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "Dino Runner — New Tab Game",
-  "version": "1.1.0",
-  "description": "Chrome new tab pe Dino-style runner with sound. Jump, duck, high score — popup se On/Off, sound aur keyboard controls.",
+  "name": "DIANO — New Tab Runner",
+  "version": "1.2.0",
+  "description": "DIANO runner on every new Chrome tab. Jump, duck, sound effects — popup se On/Off aur keyboard controls.",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },
   "action": {
-    "default_title": "Dino Runner",
+    "default_title": "DIANO",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     }
@@ -20,6 +21,7 @@
   ],
   "icons": {
     "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   }

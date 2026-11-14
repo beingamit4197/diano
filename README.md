@@ -1,26 +1,27 @@
-# Dino Runner — Chrome New Tab Game
+# DIANO — Chrome New Tab Runner
 
-Chrome ke **new tab** pe Dino-style runner. Jump cacti, duck birds, beat your high score.
+<p align="center">
+  <img src="icons/logo.png" alt="DIANO" width="280" />
+</p>
+
+Chrome ke **new tab** pe DIANO runner. Jump cacti, duck birds, beat your high score.
 
 ## Install
 
 1. Open `chrome://extensions`
 2. Enable **Developer mode**
 3. **Load unpacked** → select this folder
-4. Pin the extension icon
+4. Pin the **DIANO** icon
 5. Open a **new tab** to play
 
 ## Popup controls
 
-Toolbar icon pe click karke:
-
-- **Game on new tab** — On/Off (Off hone par simple Google search new tab)
-- **Sound effects** — jump / duck / hit / score sounds
-- **Jump / Duck keys** — Change dabao, naya key press karo
-- **Reset defaults** — Space / ↑ jump, ↓ duck
+- **Game on new tab** — On/Off
+- **Sound effects** — jump / duck / hit / score
+- **Jump / Duck keys** — remap
 - **High score reset**
 
-New tab pe top-right **✕** → Chrome default new tab / Google pe wapas.
+New tab pe top-right **✕** → Chrome default new tab / Google.
 
 ## Default keyboard
 
@@ -29,16 +30,6 @@ New tab pe top-right **✕** → Chrome default new tab / Google pe wapas.
 | Jump / Start / Retry | `Space`, `↑` |
 | Duck | `↓` |
 
-Tap / click canvas se bhi jump / start hota hai.
+## Brand
 
-## Files
-
-```
-dino-runner/
-├── manifest.json
-├── newtab.html / newtab.js
-├── game.js
-├── style.css / search.css
-├── popup.html / popup.css / popup.js
-└── icons/
-```
+Logo + icons: `icons/logo.svg`, `icons/icon.svg`, PNG sizes in `icons/`.

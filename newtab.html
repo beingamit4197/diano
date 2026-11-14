@@ -3,43 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#eef3f8" />
+  <meta name="theme-color" content="#F6F3EC" />
   <title>New Tab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="search.css" />
 </head>
 <body>
   <div class="top-bar">
-    <button type="button" class="close-ntp" id="closeNtp" title="Back to Chrome new tab" aria-label="Close game and open Chrome new tab">
+    <button type="button" class="close-ntp" id="closeNtp" title="Back to Chrome new tab" aria-label="Close and open Chrome new tab">
       <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
         <path d="M6 6l12 12M18 6L6 18" />
       </svg>
     </button>
   </div>
 
-  <!-- Game mode (extension ON) -->
   <div id="game-root" class="view" hidden>
     <main>
       <header>
-        <h1>Dino Runner</h1>
+        <div class="brand-lockup">
+          <img class="brand-mark" src="icons/icon128.png" alt="" width="44" height="44" />
+          <h1>DIAN<span>O</span></h1>
+        </div>
         <div id="skins" role="group" aria-label="Runner colour">
           <button type="button" data-skin="0" class="skin" style="--c:#38B6FF" aria-label="Blue runner"></button>
-          <button type="button" data-skin="1" class="skin" style="--c:#FF4D6D" aria-label="Red runner"></button>
+          <button type="button" data-skin="1" class="skin" style="--c:#E4572E" aria-label="Orange runner"></button>
           <button type="button" data-skin="2" class="skin" style="--c:#3BB273" aria-label="Green runner"></button>
           <button type="button" data-skin="3" class="skin" style="--c:#8B5CF6" aria-label="Purple runner"></button>
         </div>
       </header>
-      <canvas id="c" tabindex="0" aria-label="Runner game"></canvas>
+      <canvas id="c" tabindex="0" aria-label="DIANO runner game"></canvas>
       <p class="hint" id="hint">Loading controls…</p>
     </main>
   </div>
 
-  <!-- Simple new tab when game is OFF -->
   <div id="search-root" class="view" hidden>
     <div class="search-shell">
-      <img class="search-logo" src="icons/icon128.png" alt="" width="72" height="72" />
-      <h1 class="search-title">Dino Runner</h1>
-      <p class="search-sub">Game is turned off. Search the web, or enable the game from the extension popup.</p>
+      <img class="search-logo" src="icons/logo-256.png" alt="DIANO" width="200" height="198" />
+      <p class="search-sub">Game is turned off. Search the web, or enable DIANO from the extension popup.</p>
       <form class="search-form" action="https://www.google.com/search" method="get" role="search">
         <input
           class="search-input"
@@ -51,7 +54,7 @@
         />
         <button class="search-btn" type="submit">Search</button>
       </form>
-      <p class="search-tip">Toolbar → Dino Runner icon → turn <strong>Game on new tab</strong> ON</p>
+      <p class="search-tip">Toolbar → DIANO icon → turn <strong>Game on new tab</strong> ON</p>
     </div>
   </div>
 

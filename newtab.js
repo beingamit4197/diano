@@ -12,7 +12,7 @@
 
   function apply(settings) {
     const on = settings.enabled !== false;
-    document.title = on ? "Dino Runner" : "New Tab";
+    document.title = on ? "DIANO" : "New Tab";
     gameRoot.hidden = !on;
     searchRoot.hidden = on;
     if (window.DinoSound) DinoSound.setEnabled(settings.sound !== false);

@@ -5,7 +5,7 @@
   const W = 760, H = 230, GY = 182;
   const SKINS = [
     { b: "#38B6FF", d: "#1B8FD6", bl: "#BFE8FF", ch: "#FF8FA5" },
-    { b: "#FF4D6D", d: "#D92E50", bl: "#FFC2CE", ch: "#FFD1A8" },
+    { b: "#E4572E", d: "#B83A1C", bl: "#F6C4B4", ch: "#F6F3EC" },
     { b: "#3BB273", d: "#26894F", bl: "#C4EFD6", ch: "#FFB3C1" },
     { b: "#8B5CF6", d: "#6A3FD1", bl: "#DCCFFD", ch: "#FF8FA5" },
   ];
