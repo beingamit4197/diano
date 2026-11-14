@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — DIANO</title>
+  <meta name="description" content="Help and support for the DIANO Chrome new-tab runner." />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-hero">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="./">
+          <img src="assets/favicon.png" alt="" width="36" height="36" />
+          DIAN<span>O</span>
+        </a>
+        <div class="nav-links">
+          <a href="./">Home</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="https://github.com/beingamit4197/diano/issues" target="_blank" rel="noopener">GitHub Issues</a>
+        </div>
+      </nav>
+      <h1>Support</h1>
+      <p>Install tips, controls, aur common fixes — DIANO smoothly chalane ke liye.</p>
+    </div>
+  </div>
+
+  <main class="section" style="padding-top:1rem">
+    <div class="wrap">
+      <h2>Quick answers</h2>
+      <p class="sub">Pehle yahan check karo — zyada tar cheezein yahin clear ho jaati hain.</p>
+
+      <div class="faq">
+        <details open>
+          <summary>Install kaise karein?</summary>
+          <p>Chrome Web Store se “Add to Chrome” dabao, phir DIANO icon pin karo. Developer mode se load kar rahe ho to folder select karke Load unpacked use karo.</p>
+        </details>
+        <details>
+          <summary>New tab pe game nahi aa raha</summary>
+          <p>Toolbar popup mein <strong>Game on new tab</strong> ON rakho. Phir naya tab kholo. Agar purana tab open hai to usko refresh / naya tab try karo.</p>
+        </details>
+        <details>
+          <summary>Keyboard controls change karne hain</summary>
+          <p>Extension icon → Jump / Duck pe <strong>Change</strong> → naya key press. Esc se cancel. Reset to defaults se Space / ↑ / ↓ wapas aa jaate hain.</p>
+        </details>
+        <details>
+          <summary>Sound nahi aa raha</summary>
+          <p>Popup mein Sound effects ON rakho. Pehli baar jump/start pe browser audio unlock hota hai — ek baar Space dabao.</p>
+        </details>
+        <details>
+          <summary>✕ button kya karta hai?</summary>
+          <p>New tab pe top-right ✕ Chrome default new tab / Google pe le jaata hai — jab aapko normal browsing chahiye.</p>
+        </details>
+        <details>
+          <summary>High score reset</summary>
+          <p>Popup → High score → Reset. Local storage clear ho jaati hai for HI only.</p>
+        </details>
+      </div>
+
+      <div class="contact">
+        <h2>Still stuck?</h2>
+        <p>Bug ya feature request GitHub Issues pe bhejo — screenshot add kar dena.</p>
+        <div class="cta-row">
+          <a class="btn btn-accent" href="https://github.com/beingamit4197/diano/issues/new" target="_blank" rel="noopener">Open an issue</a>
+          <a class="btn btn-ghost" href="privacy.html">Privacy policy</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span id="y"></span> DIANO</span>
+    <div>
+      <a href="./">Home</a>
+      ·
+      <a href="privacy.html">Privacy</a>
+      ·
+      <a href="https://github.com/beingamit4197/diano" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

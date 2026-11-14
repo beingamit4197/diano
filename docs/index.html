@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIANO — Runner in every new tab</title>
+  <meta name="description" content="DIANO turns every Chrome new tab into a smooth runner game. Jump, duck, beat your high score." />
+  <meta property="og:title" content="DIANO" />
+  <meta property="og:description" content="Jump. Duck. Repeat. A smooth runner in every new tab." />
+  <meta property="og:image" content="assets/promo-marquee.jpg" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="./">
+          <img src="assets/favicon.png" alt="" width="36" height="36" />
+          DIAN<span>O</span>
+        </a>
+        <div class="nav-links">
+          <a href="#screens">Screens</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a class="accent" href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Chrome Store</a>
+        </div>
+      </nav>
+
+      <div class="hero-inner">
+        <h1>DIAN<span>O</span></h1>
+        <p class="lede">Jump. Duck. Repeat. — a smooth runner game in every new Chrome tab.</p>
+        <div class="cta-row">
+          <a class="btn btn-accent" href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Add to Chrome</a>
+          <a class="btn btn-ghost" href="#how">How it works</a>
+        </div>
+      </div>
+
+      <figure class="hero-art">
+        <img src="assets/promo-marquee.jpg" alt="DIANO — Jump. Duck. Repeat." width="1400" height="560" />
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="how">
+      <div class="wrap">
+        <h2>Three keys. Instant play.</h2>
+        <p class="sub">Open a new tab — game ready. Toolbar popup se On/Off, sound, aur keyboard remap.</p>
+        <div class="steps">
+          <div class="step">
+            <strong>Open a new tab</strong>
+            <p>DIANO loads instantly instead of a blank page.</p>
+          </div>
+          <div class="step">
+            <strong>Space / ↑ to jump</strong>
+            <p>↓ to duck birds. Tap the canvas if you prefer.</p>
+          </div>
+          <div class="step">
+            <strong>Beat your HI</strong>
+            <p>Day turns to night as your score climbs. Retry in one press.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screens" style="padding-top:1rem">
+      <div class="wrap">
+        <h2>See it in action</h2>
+        <p class="sub">Gameplay, night mode, skins, controls, aur game over — sab screenshots.</p>
+        <div class="shot-grid">
+          <figure class="shot wide">
+            <img src="assets/shot-gameplay.jpg" alt="DIANO gameplay" width="1024" height="640" loading="lazy" />
+            <figcaption>A smooth runner game in every new tab</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/shot-night.jpg" alt="Night mode as score climbs" width="1024" height="640" loading="lazy" />
+            <figcaption>Day turns to night as your score climbs</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/shot-skins.jpg" alt="Pick runner colour" width="1024" height="640" loading="lazy" />
+            <figcaption>Pick the runner colour you like</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/shot-controls.jpg" alt="Keyboard controls" width="1024" height="640" loading="lazy" />
+            <figcaption>Space to jump. Down to duck.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/shot-gameover.jpg" alt="Game over screen" width="1024" height="640" loading="lazy" />
+            <figcaption>Crash, retry, beat your high score</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band">
+          <h2>Install DIANO</h2>
+          <p>Chrome pe add karo, naya tab kholo, aur 10-second break le lo — bina account ke.</p>
+          <div class="cta-row">
+            <a class="btn btn-accent" href="https://chromewebstore.google.com/" target="_blank" rel="noopener">Get the extension</a>
+            <a class="btn btn-ghost" href="support.html">Need help?</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span id="y"></span> DIANO</span>
+    <div>
+      <a href="support.html">Support</a>
+      ·
+      <a href="privacy.html">Privacy</a>
+      ·
+      <a href="https://github.com/beingamit4197/diano" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — DIANO</title>
+  <meta name="description" content="Privacy Policy for the DIANO Chrome new-tab runner extension." />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-hero">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="./">
+          <img src="assets/favicon.png" alt="" width="36" height="36" />
+          DIAN<span>O</span>
+        </a>
+        <div class="nav-links">
+          <a href="./">Home</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
+        </div>
+      </nav>
+      <h1>Privacy Policy</h1>
+      <p>How DIANO handles preferences, scores, and your new tab.</p>
+    </div>
+  </div>
+
+  <main class="section" style="padding-top:0.5rem">
+    <div class="wrap prose">
+      <p class="updated">Last updated: 14 November 2026</p>
+
+      <h2>Overview</h2>
+      <p>
+        DIANO is a Chrome extension that replaces the new tab page with a lightweight runner game
+        (or a simple search page when you turn the game off). This policy explains what is stored
+        and processed when you use DIANO.
+      </p>
+
+      <h2>Data we store</h2>
+      <ul>
+        <li><strong>Preferences:</strong> game on/off, sound on/off, keyboard bindings, runner skin colour.</li>
+        <li><strong>High score:</strong> saved locally so your best run persists across new tabs.</li>
+      </ul>
+      <p>These values are kept in Chrome <code>storage.local</code> on your device.</p>
+
+      <h2>What we do not collect</h2>
+      <ul>
+        <li>No account or login.</li>
+        <li>No advertising SDKs or analytics trackers.</li>
+        <li>No sale of personal information.</li>
+        <li>We do not read your browsing history or page content from other websites for the game.</li>
+      </ul>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li><strong>storage</strong> — save preferences and high score.</li>
+        <li><strong>New tab override</strong> — show DIANO (or search fallback) when you open a new tab.</li>
+      </ul>
+
+      <h2>Sound</h2>
+      <p>
+        Sound effects are generated locally in the browser (Web Audio). No audio files are uploaded
+        or streamed from a remote server for gameplay SFX.
+      </p>
+
+      <h2>Children’s privacy</h2>
+      <p>DIANO is a general casual game and is not directed at children under 13.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, we will update the “Last updated” date on this page.</p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions: open an issue on
+        <a href="https://github.com/beingamit4197/diano/issues" target="_blank" rel="noopener">GitHub</a>
+        or visit <a href="support.html">Support</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span id="y"></span> DIANO</span>
+    <div>
+      <a href="./">Home</a>
+      ·
+      <a href="support.html">Support</a>
+      ·
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
