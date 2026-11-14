@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "DIANO — New Tab Runner",
   "version": "1.2.0",
-  "description": "DIANO runner on every new Chrome tab. Jump, duck, sound effects — popup se On/Off aur keyboard controls.",
+  "description": "DIANO runner on every new Chrome tab. Jump, duck, sound effects — toggle and remap controls from the popup.",
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   },

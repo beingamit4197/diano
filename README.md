@@ -37,9 +37,9 @@
 
 ## Popup
 
-- Game on new tab On/Off
-- Sound effects On/Off
+- Game on new tab: On/Off
+- Sound effects: On/Off
 - Remap Jump / Duck keys
-- High score reset
+- Reset high score
 
-New tab ✕ → Chrome / Google pe wapas.
+Use the new-tab ✕ button to return to Chrome / Google.
