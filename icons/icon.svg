@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
-  <rect width="128" height="128" rx="28" fill="#F6F3EC"/>
-  <g transform="translate(8 18) scale(0.52)">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <!-- Full-bleed cream squircle -->
+  <rect width="512" height="512" rx="112" fill="#F6F3EC"/>
+  <!-- Character centered: original art ~200×120 around (99,70) -->
+  <g transform="translate(256 268) scale(1.85) translate(-99 -70)">
     <path d="M48 58 Q16 68 2 102 Q34 94 54 88 Z" fill="#14171F"/>
     <ellipse cx="92" cy="70" rx="56" ry="33" fill="#14171F"/>
     <path d="M112 52 Q134 48 138 26 L170 34 Q164 74 128 88 Z" fill="#14171F"/>
