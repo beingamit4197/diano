@@ -153,11 +153,17 @@ canvas {
   background: #d9ebe8;
   box-shadow: 0 14px 40px rgba(20, 23, 31, 0.16);
   outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
-canvas:focus-visible {
-  box-shadow: 0 0 0 4px var(--accent), 0 14px 40px rgba(20, 23, 31, 0.16);
+canvas:focus,
+canvas:focus-visible,
+canvas:active {
+  outline: none;
+  border: none;
+  box-shadow: 0 14px 40px rgba(20, 23, 31, 0.16);
 }
 
 .hint {
