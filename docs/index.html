@@ -69,29 +69,71 @@
 
     <section class="section" id="screens" style="padding-top:1rem">
       <div class="wrap">
-        <h2>See it in action</h2>
-        <p class="sub">Gameplay, night mode, skins, controls, aur game over — sab screenshots.</p>
-        <div class="shot-grid">
-          <figure class="shot wide">
-            <img src="assets/shot-gameplay.jpg" alt="DIANO gameplay" width="1024" height="640" loading="lazy" />
-            <figcaption>A smooth runner game in every new tab</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/shot-night.jpg" alt="Night mode as score climbs" width="1024" height="640" loading="lazy" />
-            <figcaption>Day turns to night as your score climbs</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/shot-skins.jpg" alt="Pick runner colour" width="1024" height="640" loading="lazy" />
-            <figcaption>Pick the runner colour you like</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/shot-controls.jpg" alt="Keyboard controls" width="1024" height="640" loading="lazy" />
-            <figcaption>Space to jump. Down to duck.</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="assets/shot-gameover.jpg" alt="Game over screen" width="1024" height="640" loading="lazy" />
-            <figcaption>Crash, retry, beat your high score</figcaption>
-          </figure>
+        <div class="carousel-head">
+          <div>
+            <h2>See it in action</h2>
+            <p class="sub">Gameplay, night mode, skins, controls, aur game over.</p>
+          </div>
+          <div class="carousel-tools" aria-hidden="false">
+            <button type="button" class="carousel-btn" id="carouselPrev" aria-label="Previous screenshot">‹</button>
+            <button type="button" class="carousel-btn" id="carouselNext" aria-label="Next screenshot">›</button>
+          </div>
+        </div>
+
+        <div
+          class="carousel"
+          id="carousel"
+          tabindex="0"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="DIANO screenshots"
+        >
+          <div class="carousel-stage">
+            <article class="carousel-card is-active" data-i="0">
+              <img src="assets/shot-gameplay.jpg" alt="DIANO gameplay" width="1024" height="640" />
+              <div class="carousel-meta">
+                <span class="carousel-index">01</span>
+                <p>A smooth runner in every new tab</p>
+              </div>
+            </article>
+            <article class="carousel-card" data-i="1">
+              <img src="assets/shot-night.jpg" alt="Night mode" width="1024" height="640" />
+              <div class="carousel-meta">
+                <span class="carousel-index">02</span>
+                <p>Day turns to night as your score climbs</p>
+              </div>
+            </article>
+            <article class="carousel-card" data-i="2">
+              <img src="assets/shot-skins.jpg" alt="Runner skins" width="1024" height="640" />
+              <div class="carousel-meta">
+                <span class="carousel-index">03</span>
+                <p>Pick the runner colour you like</p>
+              </div>
+            </article>
+            <article class="carousel-card" data-i="3">
+              <img src="assets/shot-controls.jpg" alt="Controls" width="1024" height="640" />
+              <div class="carousel-meta">
+                <span class="carousel-index">04</span>
+                <p>Space to jump. Down to duck.</p>
+              </div>
+            </article>
+            <article class="carousel-card" data-i="4">
+              <img src="assets/shot-gameover.jpg" alt="Game over" width="1024" height="640" />
+              <div class="carousel-meta">
+                <span class="carousel-index">05</span>
+                <p>Crash, retry, beat your high score</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="carousel-rail" role="tablist" aria-label="Screenshot dots">
+            <button type="button" class="carousel-dot is-on" role="tab" aria-selected="true" aria-label="Slide 1" data-go="0"></button>
+            <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-go="1"></button>
+            <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 3" data-go="2"></button>
+            <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 4" data-go="3"></button>
+            <button type="button" class="carousel-dot" role="tab" aria-selected="false" aria-label="Slide 5" data-go="4"></button>
+          </div>
+          <div class="carousel-progress" aria-hidden="true"><span id="carouselProgress"></span></div>
         </div>
       </div>
     </section>
@@ -120,6 +162,7 @@
       <a href="https://github.com/beingamit4197/diano" target="_blank" rel="noopener">GitHub</a>
     </div>
   </footer>
+  <script src="carousel.js"></script>
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
