@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Dino Runner — New Tab Game",
+  "version": "1.0.0",
+  "description": "Chrome new tab pe Dino-style runner. Jump, duck, high score — popup se On/Off aur keyboard controls manage karo.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "action": {
+    "default_title": "Dino Runner",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

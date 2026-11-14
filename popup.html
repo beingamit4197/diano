@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dino Runner</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="icons/icon48.png" alt="" width="36" height="36" />
+      <div>
+        <h1>Dino Runner</h1>
+        <p class="tag">New Tab game</p>
+      </div>
+    </div>
+    <div class="status" id="statusPill" data-on="true">ON</div>
+  </header>
+
+  <section class="card">
+    <div class="row">
+      <div class="row-text">
+        <strong>Game on new tab</strong>
+        <span>Show runner when you open a new tab</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="enabled" checked />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </section>
+
+  <section class="card stack">
+    <div class="section-label">Keyboard controls</div>
+    <div class="key-row">
+      <div>
+        <strong>Jump / Start / Retry</strong>
+        <span id="jumpLabel">Space, ↑</span>
+      </div>
+      <button type="button" class="chip" id="bindJump">Change</button>
+    </div>
+    <div class="key-row">
+      <div>
+        <strong>Duck</strong>
+        <span id="duckLabel">↓</span>
+      </div>
+      <button type="button" class="chip" id="bindDuck">Change</button>
+    </div>
+    <p class="hint" id="bindHint">Click Change, then press a key.</p>
+    <button type="button" class="link-btn" id="resetKeys">Reset to defaults</button>
+  </section>
+
+  <section class="card">
+    <div class="row">
+      <div class="row-text">
+        <strong>High score</strong>
+        <span id="hiScore">0</span>
+      </div>
+      <button type="button" class="chip danger" id="resetHi">Reset</button>
+    </div>
+  </section>
+
+  <section class="card tip">
+    <div class="tip-title">How to play</div>
+    <ol>
+      <li>Open a new tab</li>
+      <li>Press jump key or tap the canvas to start</li>
+      <li>Jump cacti, duck birds, beat your HI score</li>
+    </ol>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+:root{--navy:#1F2A44;--blue:#38B6FF;--red:#FF4D6D}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  font-family:ui-rounded,"Nunito","Baloo 2",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--navy);
+  background-color:#F2F2F2;
+  background-image:conic-gradient(#E8E8E8 25%,transparent 0 50%,#E8E8E8 0 75%,transparent 0);
+  background-size:64px 64px;
+  display:grid;place-items:center;
+}
+main{width:min(94vw,1000px)}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+h1{font-size:22px;font-weight:800;letter-spacing:-.01em;margin:0}
+#skins{display:flex;gap:10px}
+.skin{width:26px;height:26px;border-radius:50%;border:3px solid #fff;background:var(--c);
+  box-shadow:0 2px 6px rgba(31,42,68,.25);cursor:pointer;padding:0;transition:transform .15s}
+.skin:hover{transform:scale(1.12)}
+.skin.on{outline:3px solid var(--navy);outline-offset:2px}
+.skin:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+canvas{display:block;width:100%;border-radius:22px;box-shadow:0 14px 40px rgba(31,42,68,.22);outline:none;touch-action:manipulation}
+canvas:focus-visible{box-shadow:0 0 0 4px var(--blue),0 14px 40px rgba(31,42,68,.22)}
+.hint{text-align:center;font-size:14px;margin:16px 0 0;color:#5B6B8A}
+@media (prefers-reduced-motion:reduce){.skin{transition:none}}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Tab</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="search.css" />
+</head>
+<body>
+  <!-- Game mode (extension ON) -->
+  <div id="game-root" class="view" hidden>
+    <main>
+      <header>
+        <h1>Dino Runner</h1>
+        <div id="skins" role="group" aria-label="Runner colour">
+          <button type="button" data-skin="0" class="skin" style="--c:#38B6FF" aria-label="Blue runner"></button>
+          <button type="button" data-skin="1" class="skin" style="--c:#FF4D6D" aria-label="Red runner"></button>
+          <button type="button" data-skin="2" class="skin" style="--c:#3BB273" aria-label="Green runner"></button>
+          <button type="button" data-skin="3" class="skin" style="--c:#8B5CF6" aria-label="Purple runner"></button>
+        </div>
+      </header>
+      <canvas id="c" tabindex="0" aria-label="Runner game"></canvas>
+      <p class="hint" id="hint">Loading controls…</p>
+    </main>
+  </div>
+
+  <!-- Simple new tab when game is OFF -->
+  <div id="search-root" class="view" hidden>
+    <div class="search-shell">
+      <img class="search-logo" src="icons/icon128.png" alt="" width="72" height="72" />
+      <h1 class="search-title">Dino Runner</h1>
+      <p class="search-sub">Game is turned off. Search the web, or enable the game from the extension popup.</p>
+      <form class="search-form" action="https://www.google.com/search" method="get" role="search">
+        <input
+          class="search-input"
+          type="search"
+          name="q"
+          placeholder="Search Google"
+          autocomplete="off"
+          autofocus
+        />
+        <button class="search-btn" type="submit">Search</button>
+      </form>
+      <p class="search-tip">Toolbar → Dino Runner icon → turn <strong>Game on new tab</strong> ON</p>
+    </div>
+  </div>
+
+  <script src="newtab.js"></script>
+</body>
+</html>
